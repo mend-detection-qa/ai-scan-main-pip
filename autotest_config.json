@@ -1,0 +1,38 @@
+{
+  "description": "Probe 1/2: default branch with AI deps — AI scan IS expected to run",
+  "version": 1.8,
+  "base_config": {
+    "branch": null,
+
+    "validate_scan_output": true,
+    "scan_output": {
+      "security_scan_report_conclusion": "success",
+      "total_libs_scanned": {"gte": 3}
+    },
+
+    "validate_dependency_tree": true,
+    "dependency_tree": {
+      "check_dependency_tree_detection_status": true,
+      "check_update_request_sca_results": true,
+      "expected_total_dependencies_number": {"gte": 3},
+      "expected_direct_dependencies_number": {"gte": 3},
+      "direct_dependencies_names_list": {"contains": ["anthropic", "openai", "requests"]},
+      "expected_package_managers": {"contains": ["pip"]},
+      "validate_agent_versions": false
+    },
+
+    "validate_vulnerabilities_table": false,
+
+    "validate_scanner_logs": true,
+    "logs": {
+      "check_scanner_logs": true,
+      "detect_secrets": false,
+      "expected_log_lines": [
+        {"_comment": "TODO: replace with the AI-scan-EXECUTED log line provided by the user", "operator": "regex", "value": "TODO_AI_SCAN_EXECUTED_LOG_LINE"}
+      ]
+    },
+
+    "validate_reachability": false,
+    "validate_project_contributors": false
+  }
+}
