@@ -5,7 +5,7 @@ This is a sample AI-augmented Python project used for SCA detection probes.
 ## Stack
 - Python 3.11
 - HTTP client: `requests`
-- LLM SDKs: `anthropic`, `openai`, `claude-agent-sdk`
+- LLM SDKs: `anthropic`, `openai`
 
 ## Conventions
 - Use type hints
