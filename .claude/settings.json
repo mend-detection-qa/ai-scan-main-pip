@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pytest:*)"
+    ],
+    "deny": []
+  },
+  "env": {
+    "ANTHROPIC_API_KEY": "$ANTHROPIC_API_KEY"
+  }
+}

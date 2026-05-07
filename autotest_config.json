@@ -7,16 +7,16 @@
     "validate_scan_output": true,
     "scan_output": {
       "security_scan_report_conclusion": "success",
-      "total_libs_scanned": {"gte": 3}
+      "total_libs_scanned": {"gte": 4}
     },
 
     "validate_dependency_tree": true,
     "dependency_tree": {
       "check_dependency_tree_detection_status": true,
       "check_update_request_sca_results": true,
-      "expected_total_dependencies_number": {"gte": 3},
-      "expected_direct_dependencies_number": {"gte": 3},
-      "direct_dependencies_names_list": {"contains": ["anthropic", "openai", "requests"]},
+      "expected_total_dependencies_number": {"gte": 4},
+      "expected_direct_dependencies_number": {"gte": 4},
+      "direct_dependencies_names_list": {"contains": ["anthropic", "openai", "claude-agent-sdk", "requests"]},
       "expected_package_managers": {"contains": ["pip"]},
       "validate_agent_versions": false
     },
